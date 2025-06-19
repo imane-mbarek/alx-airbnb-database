@@ -26,3 +26,15 @@ Contient deux requêtes SQL avec sous-requêtes :
 - Utilisateurs avec plus de 3 réservations (subquery corrélée)
 
 Fichier : `subqueries.sql`
+
+
+# Aggregations and Window Functions
+
+Ce fichier contient deux requêtes SQL illustrant :
+
+- Le nombre total de réservations par utilisateur (avec `COUNT` et `GROUP BY`).
+- Le classement des propriétés selon le nombre total de réservations (avec la fonction fenêtre `RANK()`).
+
+Ces requêtes permettent d’analyser les données de réservation pour mieux comprendre l’activité des utilisateurs et la popularité des propriétés.
+
+Fichier : `aggregations_and_window_functions.sql`
