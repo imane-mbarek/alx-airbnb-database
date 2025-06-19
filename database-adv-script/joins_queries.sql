@@ -45,6 +45,7 @@ INNER JOIN users ON bookings.user_id = users.id;
 SELECT properties.*, reviews.*
 FROM properties
 LEFT JOIN reviews ON properties.id = reviews.property_id;
+ORDER BY properties.id;
 
 -- FULL OUTER JOIN (emulated with UNION)
 SELECT users.*, bookings.*
