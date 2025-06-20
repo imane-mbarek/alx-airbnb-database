@@ -1,4 +1,4 @@
-EXPLAIN SELECT * FROM bookings WHERE user_id = 1;
+EXPLAIN ANALYZE SELECT * FROM bookings WHERE user_id = 1;
 
 
 
@@ -17,4 +17,5 @@ CREATE INDEX idx_reviews_property_id ON reviews(property_id);
 -- Index sur la colonne users.id (pas obligatoire car c'est la clé primaire, donc indexée automatiquement)
 -- Idem pour properties.id
 
-EXPLAIN SELECT * FROM bookings WHERE user_id = 1;
+EXPLAIN ANALYZE SELECT * FROM bookings WHERE user_id = 1;
+
