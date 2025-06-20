@@ -24,6 +24,12 @@ CREATE TABLE reviews (
     comment TEXT,
     FOREIGN KEY (property_id) REFERENCES properties(id)
 );
+CREATE TABLE payments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    booking_id INT,
+    amount DECIMAL(10,2),
+    FOREIGN KEY (booking_id) REFERENCES bookings(id)
+);
 
 INSERT INTO users (name) VALUES ('Alice'), ('Bob');
 
@@ -32,6 +38,9 @@ INSERT INTO bookings (user_id, booking_date) VALUES (1, '2024-06-01'), (2, '2024
 INSERT INTO properties (title) VALUES ('Villa Marrakech'), ('Riad Fès');
 
 INSERT INTO reviews (property_id, comment) VALUES (1, 'Excellent'), (1, 'Very clean');
+
+INSERT INTO payments (booking_id, amount) VALUES (1, 100.00), (2, 150.00);
+
 
 
 
