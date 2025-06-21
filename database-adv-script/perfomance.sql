@@ -8,5 +8,4 @@ SELECT
 FROM bookings b
 JOIN users u ON u.id = b.user_id
 JOIN properties p ON p.id = b.property_id
-JOIN payments pay ON pay.booking_id = b.id AND pay.amount > 0;
-
+WHERE pay.amount > 0;
